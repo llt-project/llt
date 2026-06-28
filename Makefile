@@ -6,10 +6,10 @@ BUILD_DIR = build
 
 CFLAGS = -Wall -Wextra -O2 -fPIC
 
-MODULES = core
+MODULES = core tools
 
 INCLUDES := $(foreach m,$(MODULES),-I$(m)/include)
-SRCS := $(foreach m,$(MODULES),$(wildcard $(m)/src/*.c))
+SRCS := $(shell find $(MODULES) -type f -name "*.c" -not -path "*/test/*")
 
 UNAME_S := $(shell uname -s)
 UNAME_M := $(shell uname -m)

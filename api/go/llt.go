@@ -19,7 +19,7 @@ type MathOutput struct {
 	Error  int32
 }
 
-func init() {
+func Init() {
 	data, _ := base64.StdEncoding.DecodeString(ContentDynLibLltBase64)
 
 	tmp := os.TempDir() + "/libllt.so"

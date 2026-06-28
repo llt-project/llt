@@ -25,7 +25,7 @@ func main() {
 	out := "package llt\n\n" +
 		"var ContentDynLibLltBase64 = `" + encoded + "`\n"
 
-	err = os.WriteFile("libllt.gen.go", []byte(out), 0644)
+	err = os.WriteFile("llt.content.gen.go", []byte(out), 0644)
 	if err != nil {
 		panic(err)
 	}
