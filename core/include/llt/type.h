@@ -2,6 +2,7 @@
 #ifndef TYPE
 #define TYPE 
 
+
 typedef enum {
     TY_I16,
     TY_I32,
@@ -16,5 +17,14 @@ typedef uint32_t ValueId;
 typedef uint32_t InstId;
 typedef uint32_t BlockId;
 typedef uint32_t FuncId;
+
+typedef struct symbol  Symbol;
+
+struct symbol 
+{
+    const char *name;
+    void *definition;
+};
+
 
 #endif

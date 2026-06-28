@@ -6,6 +6,7 @@
 #include "inst.h"
 #include "arena.h"
 
+
 typedef struct IrInst {
     InstRKind kind;
     TypeKind type;

@@ -13,7 +13,6 @@ HEADERS := $(shell find $(MODULES) -type f -name "*.h" | sort)
 
 INCLUDES := \
   -Icore/include \
-  -Icore/include/ir \
   -Itools/include
 
 UNAME_S := $(shell uname -s)

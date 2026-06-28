@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
 typedef struct Arena {
     uint8_t *buffer;
     size_t capacity;

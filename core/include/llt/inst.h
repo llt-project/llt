@@ -2,6 +2,7 @@
 #ifndef INST
 #define INST
 
+
 typedef enum {
     IR_CONST,
 
