@@ -4,7 +4,7 @@
 
 #include "type.h"
 #include "inst.h"
-#include "arena.h"
+#include "llt/arena.h"
 
 
 typedef struct IrInst {

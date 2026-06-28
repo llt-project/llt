@@ -23,6 +23,6 @@ typedef enum {
 
     IR_CALL,
     IR_RET
-} InstRKind;
+} InstIrKind;
 
 #endif

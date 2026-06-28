@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "type.h"
+#include "ir/type.h"
 #include "llt/arena.h"
 
 
