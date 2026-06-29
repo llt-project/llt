@@ -1,19 +1,22 @@
 NAME = llt
 CC = zig cc
 
+API = llt/api
 KERNEL = llt/kernel
 PLUGIN = llt/plugin
 UTILS  = llt/utils
 BUILD  = build
 
 INCLUDES = \
-	-I$(KERNEL)/include \
+	-I$(API)/include \
 	-I$(PLUGIN)/include \
+	-I$(KERNEL)/include \
 	-I$(UTILS)/include
 
 SRCS = \
-	$(KERNEL)/src/api.c \
+	$(API)/src/api.c \
 	$(PLUGIN)/src/plugin.c \
+	$(KERNEL)/src/kernel.c \
 	$(UTILS)/src/arena.c
 
 OBJS = $(SRCS:.c=.o)

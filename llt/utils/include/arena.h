@@ -18,4 +18,6 @@ void arena_reset(Arena *a);
 void* arena_alloc(Arena *a, size_t size);
 void* arena_alloc_aligned(Arena *a, size_t size, size_t align);
 
+extern Arena g_arena;
+
 #endif

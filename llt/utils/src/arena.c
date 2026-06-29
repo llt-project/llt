@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 static size_t align_up(size_t x, size_t align)
 {
     return (x + (align - 1)) & ~(align - 1);
