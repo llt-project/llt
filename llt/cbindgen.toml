@@ -5,7 +5,13 @@ include_guard = "LLT_H"
 style = "both"
 
 [export]
-include = ["ModuleHandle"]
+include = [
+  "ModuleHandle",
+  "FuncHandle",
+  "BlockHandle",
+  "InstHandle",
+  "GlobalVarHandle"
+]
 
 [parse]
 parse_deps = true
