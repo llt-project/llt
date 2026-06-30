@@ -1,5 +1,6 @@
 **/.DS_Store
 build/
 .vscode/
-.zig-cache/
-PLAN
+target/
+Cargo.lock
+libllt.dylib

@@ -1,4 +1,4 @@
-mod module;
+use crate::func::{Function};
 
 #[repr(C)]
 pub struct ModuleHandle {
