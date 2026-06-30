@@ -5,7 +5,7 @@ include_guard = "LLT_H"
 style = "both"
 
 [export]
-include = ["Module"]
+include = ["ModuleHandle"]
 
 [parse]
 parse_deps = true

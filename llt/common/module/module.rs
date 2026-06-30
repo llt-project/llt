@@ -1,4 +1,4 @@
-mod Module;
+mod module;
 
 #[repr(C)]
 pub struct ModuleHandle {

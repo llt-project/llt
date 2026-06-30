@@ -7,3 +7,5 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
+kernel = { path = "./kernel" }
+common = { path = "./common" }
