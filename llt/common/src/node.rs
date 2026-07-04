@@ -38,10 +38,10 @@ pub enum NodeKind {
     AddressOf { base: NodeId },
     Deref { ptr: NodeId },
 
-    Eq { a: NodeId, b: NodeId },
-    Ne { a: NodeId, b: NodeId },
-    Lt { a: NodeId, b: NodeId },
-    Gt { a: NodeId, b: NodeId },
+    Eq { a: NodeId, b: NodeId }, // a == b
+    Ne { a: NodeId, b: NodeId }, // a != b
+    Lt { a: NodeId, b: NodeId }, // a < b
+    Gt { a: NodeId, b: NodeId }, // a > b
 
     Jump { target: BlockId },
 

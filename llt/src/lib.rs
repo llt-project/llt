@@ -1,10 +1,14 @@
 use common::project::Project;
 
+// TEST FUNCTIONS
 #[unsafe(no_mangle)]
 pub extern "C" fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
+//
+// PROJECT FUNCTIONS
+//
 #[unsafe(no_mangle)]
 pub extern "C" fn project_new() -> *mut Project {
     let p: Box<Project> = Box::new(Project::new());
