@@ -1,1 +1,1 @@
-pub use common;
+pub use model;
