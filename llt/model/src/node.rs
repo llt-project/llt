@@ -24,43 +24,44 @@ pub struct Node {
 }
 
 pub enum NodeKind {
-    ConstI64(i64),
-    ConstBool(bool),
+    ConstI64(i64), // 64-bit integer constant
+    ConstBool(bool), // true || false
 
-    Add { a: NodeId, b: NodeId },
-    Sub { a: NodeId, b: NodeId },
-    Mul { a: NodeId, b: NodeId },
-    Div { a: NodeId, b: NodeId },
+    Add { a: NodeId, b: NodeId }, // a + b
+    Sub { a: NodeId, b: NodeId }, // a - b
+    Mul { a: NodeId, b: NodeId }, // a * b
+    Div { a: NodeId, b: NodeId }, // a / b
+    Rem { a: NodeId, b: NodeId }, // a % b
 
-    Load { ptr: NodeId },
-    Store { ptr: NodeId, value: NodeId },
+    Load { ptr: NodeId }, // *ptr low level
+    Store { ptr: NodeId, value: NodeId }, // *ptr = value
 
-    AddressOf { base: NodeId },
-    Deref { ptr: NodeId },
+    AddressOf { base: NodeId }, // &base
+    Deref { ptr: NodeId }, // *ptr
 
     Eq { a: NodeId, b: NodeId }, // a == b
     Ne { a: NodeId, b: NodeId }, // a != b
     Lt { a: NodeId, b: NodeId }, // a < b
     Gt { a: NodeId, b: NodeId }, // a > b
 
-    Jump { target: BlockId },
+    Jump { target: BlockId }, // goto target
 
     Branch {
         cond: NodeId,
         then_bb: BlockId,
         else_bb: BlockId,
-    },
+    }, // if (cond) goto then_bb else goto else_bb
 
-    Return { value: Option<NodeId> },
+    Return { value: Option<NodeId> }, // return value
 
     Call {
         func: NodeId,
         args: Vec<NodeId>,
-    },
+    }, // func(args...)
 
     Phi {
         incoming: Vec<(BlockId, NodeId)>,
-    },
+    }, // phi node for SSA form
 }
 
 pub enum Type {
